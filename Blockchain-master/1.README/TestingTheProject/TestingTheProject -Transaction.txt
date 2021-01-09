@@ -1,0 +1,54 @@
+1.In cmd type
+  -- npm run dev
+  This will start the the blockchain
+
+
+2.In another cmp
+   --set HTTP_PORT=3002 && set P2P_PORT=5002 && set PEERS=ws://localhost:3001 && npm run dev
+   This will start another socket and connect it to Server.
+
+3.Open PostMan
+
+4.Create a get Request and type
+   -->localhost:3002/public-key
+ 
+ This will result you the public key of User2 who is at port 3001
+ Copy the long publicKey Address
+
+5. Create a post Request and type
+   --> localhost:3001/transact
+   -->Go to body Tab and select RAW and application JSON
+
+  type in the blank Area
+  
+  {
+   "recipient" : "paste the public Key" ,
+   "amount" : 50
+   }
+
+  Then press SEND 2-3 times.
+
+   We will find the amount gets substracted from the sender's wallet
+   and there will be output objects which shows the outgoing transaction .
+
+6.Create a GET Request and type
+   -->localhost:3001/transactions
+
+  --> this will show the transaction pool of 3001
+
+7.Create a GET request and type
+ -->localhost:3002/transactions
+ -->This will give the same as above because, 3001 is sending amount to 3002 ,So it will be reflected in both transaction pools untill it get mined by some miner
+
+
+
+8.Create A GET request and type
+  ---> localhost:3001/mine-transactions
+ 
+This will show the Blockchain whose second object is transaction list and the reward Transaction for the miner who did the act of mining.
+ 
+
+9.Create a POST request and type
+  --> localhost:/3001/transact
+
+Now the unconfirmed transactions get removed from transaction pool and the Balance get updated.   

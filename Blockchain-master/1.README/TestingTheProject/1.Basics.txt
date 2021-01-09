@@ -1,0 +1,22 @@
+1.In cmd type
+ --> npm run dev
+
+This will start the server
+
+2.Open Postman
+
+Type a GET request
+--> localhost:3001/blocks
+
+This will show the blockchain with genesis block
+
+3.Create a POST request
+ -->localhost:3001/mine
+ -->Select "RAW" from diff RadioButtons and Text-JSON
+ -->In Black Area type
+   
+   {
+      "data" : "Some Data" //in screenshot it is Kushagra  
+   }
+
+The resultant blockchain will contain the new Data 

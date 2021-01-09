@@ -1,0 +1,42 @@
+1. 
+You will need a command line application. For MacOS and Linux,
+I recommend the native Terminal application. Iterm2 is also a good option on MacOS. 
+For Windows, I recommend using the Git Bash shell application.
+
+2.
+ You will need a code editor.
+Use whatever you're already comfortable with. But if you're looking for one, 
+I recommend Visual Studio Code (it's the code editor used in the course).
+I also suggest configuring the editor to be launchable from the command line.
+Do so by pressing 
+
+"CMD-Shift-P"
+, and typing in "Shell." An option for
+
+"Shell Command: Install 'code' command in PATH" 
+
+should appear. Select it, and re-start your command line and Visual Studio Code.
+
+
+
+2.
+We will use NodeJS as the engine to run our JavaScript-based project. Make sure you have Node installed on your system.
+Here is the installation link: https://nodejs.org/en/download/. You’ll need to download the appropriate installer 
+for your system, and go through the installation process.
+
+With Node installed, you should get responses similar to this on the command line:
+
+$ node -v
+   v8.8.1 (or something similar)
+
+$ npm -v
+   5.4.2 (or something similar)
+
+
+
+
+
+4.
+
+We’ll also use a tool called Postman. 
+This app will allow us to send custom HTTP Requests to our running blockchain servers. 
